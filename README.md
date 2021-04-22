@@ -1,5 +1,9 @@
 # Elevator design Using REST
 
+This service is responsible for handling a fictional building's Elevator operations.
+User of the service will be able to summon an elevator for a particular building they are in and then interact with that elevator through API requests. Once in
+the elevator, they will be able to select a floor for the elevator to take them to.
+
 This Project uses SpringBoot and Rest Design to implement below Use cases.
 
 - Add a user
