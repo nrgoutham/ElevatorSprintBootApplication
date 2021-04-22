@@ -57,43 +57,44 @@ This Project can be executed in aws by following below steps.
 
 I have created RDS -> Postgres database and EC2 instance with application running and it can be tested with below URLs
 
-Get All Users in table
+- Get All Users in table<br/>
 GET- http://ec2-3-250-231-234.eu-west-1.compute.amazonaws.com:8080/api/v1/users
 
-Get All buildings in table
+- Get All buildings in table<br/>
 GET- http://ec2-3-250-231-234.eu-west-1.compute.amazonaws.com:8080/api/v1/buildings
 
-Get All elevators in table
+- Get All elevators in table<br/>
 GET- http://ec2-3-250-231-234.eu-west-1.compute.amazonaws.com:8080/api/v1/elevators
 
-Add User
+- Add User<br/>
 POST- http://ec2-3-250-231-234.eu-west-1.compute.amazonaws.com:8080/api/v1/user
+<br/>Json Body -<br/>
 {
     "name": "name",
     "buildingIds": ["building UUID here"]
 }
 
-Update User - Name and list of buildingIds
-PUT- http://ec2-3-250-231-234.eu-west-1.compute.amazonaws.com:8080/api/v1/user
+- Update User - Name and list of buildingIds<br/>
+PUT- http://ec2-3-250-231-234.eu-west-1.compute.amazonaws.com:8080/api/v1/user <br/>
 {
     "name": "name",
     "buildingIds": ["building UUID here"]
 }
 
-Find a building for a user
+- Find a building for a user<br/>
 GET- http://ec2-3-250-231-234.eu-west-1.compute.amazonaws.com:8080/api/v1/user/0ed317dd-ae43-44e6-b866-aa0b7b02c47c/buildings
 
 
-Get status of all elevators in a building for a user
+- Get status of all elevators in a building for a user<br/>
 GET- http://ec2-3-250-231-234.eu-west-1.compute.amazonaws.com:8080/api/v1/user/0ed317dd-ae43-44e6-b866-aa0b7b02c47c/building/1fd5257d-96a5-4631-818c-def734e94c7f/elevatorStatus
 
-User summons an elevator
+- User summons an elevator<br/>
 GET- http://ec2-3-250-231-234.eu-west-1.compute.amazonaws.com:8080/api/v1/user/0ed317dd-ae43-44e6-b866-aa0b7b02c47c/building/1fd5257d-96a5-4631-818c-def734e94c7f/summon
 
-User select a floor
-To go UP
+- User select a floor<br/>
+To go UP<br/>
 GET- http://ec2-3-250-231-234.eu-west-1.compute.amazonaws.com:8080/api/v1/user/0ed317dd-ae43-44e6-b866-aa0b7b02c47c/elevator/35ebd664-46ac-48e3-89f4-46cc95873dd7/selectFloor/9
-To go Down
+<br/>To go Down<br/>
 GET- http://ec2-3-250-231-234.eu-west-1.compute.amazonaws.com:8080/api/v1/user/0ed317dd-ae43-44e6-b866-aa0b7b02c47c/elevator/35ebd664-46ac-48e3-89f4-46cc95873dd7/selectFloor/1
 
 
