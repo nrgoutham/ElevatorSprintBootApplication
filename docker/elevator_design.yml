@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres:10.4
+    environment:
+      POSTGRES_USER: elevator
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: elevator
+    volumes:
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    ports:
+      - "5432:5432"
