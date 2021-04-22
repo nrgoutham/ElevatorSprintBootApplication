@@ -45,7 +45,7 @@ public class PostgresProperties {
 
     // change localhost to aws RDS instance URL
     public String getJdbcUrl() {
-        return "jdbc:postgresql://elevator.c6oxrngzouaa.eu-west-1.rds.amazonaws.com:5432/" + getDbName();
+        return "jdbc:postgresql://localhost:5432/" + getDbName();
     }
 
     public String getDbName() {
